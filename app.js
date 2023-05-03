@@ -24,13 +24,13 @@ form.addEventListener('submit', async function (e) {
 })
 
 function showError() {
-    const name = document.querySelector("name")
+    
     const h1 = document.createElement('h1');
     h1.textContent = "ERROR: Pokémon does not exist. ";
     h1.style.color = "red"
     container.append(h1);
 
-    const number = document.querySelector("number")
+    
     const p = document.createElement('p');
     p.textContent = "Please enter a new search term above.";
     container.append(p);
@@ -54,28 +54,28 @@ function loopMoves(info) {
 
 const setData = (info) => {
     if (info.name === "mr-mime") {
-        const name = document.querySelector("name")
+        
         const h1 = document.createElement('h1');
         h1.textContent = "Mr. Mime";
         container.append(h1);
     } else {
-        const name = document.querySelector("name")
+        
         const h1 = document.createElement('h1');
         h1.textContent = info.name.charAt(0).toUpperCase() + info.name.slice(1).toLowerCase();
         container.append(h1);
     }
 
-    const number = document.querySelector("number")
+    
     const p = document.createElement('p');
     p.textContent = "No. " + info.id;
     container.append(p);
 
-    const pokeType = document.querySelector(".type")
+    
     const pType = document.createElement('p');
     pType.textContent = "Type: " + info.types[0].type.name.charAt(0).toUpperCase() + info.types[0].type.name.slice(1).toLowerCase();
     container.append(pType)
 
-    const photo = document.querySelector("photo")
+    
     const img = document.createElement('img');
     img.src = info.sprites.front_default;
     container.append(img);
