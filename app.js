@@ -20,6 +20,7 @@ form.addEventListener('submit', async function (e) {
         setBackgroundColor(data);
     } catch {
         showError();
+        form.elements.query.value = '';
     }
 })
 
