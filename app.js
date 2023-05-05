@@ -103,7 +103,7 @@ function setBackgroundColor(info) {
         container.style.background = "lavender";
     } else if (info.types[0].type.name === "normal" || info.types[0].type.name === "fairy" || info.types[0].type.name === "flying" || info.types[0].type.name === "dragon") {
         container.style.background = "white";
-    } else if (info.types[0].type.name === "rock" || info.types[0].type.name === "fighting") {
+    } else if (info.types[0].type.name === "rock" || info.types[0].type.name === "fighting" || info.types[0].type.name === "ground") {
         container.style.background = "burlywood";
     } else if (info.types[0].type.name === "steel") {
         container.style.background = "lightgrey";
