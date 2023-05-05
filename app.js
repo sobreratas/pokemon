@@ -6,11 +6,14 @@ form.addEventListener('submit', async function (e) {
     e.preventDefault();
     container.innerHTML = ''
     let searchTerm = form.elements.query.value.toLowerCase();
-    if(searchTerm === "mr mime" || searchTerm === "mr. mime" || searchTerm === "Mr. Mime") {
+    if(searchTerm === "mr mime" || searchTerm === "mr. mime") {
         searchTerm = "mr-mime";
     } else if (searchTerm === "farfetch'd"){
         searchTerm = "farfetchd"
+    } else if(searchTerm === "mime jr" || searchTerm === "mime jr.") {
+        searchTerm = "mime-jr";
     }
+
     try {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchTerm}`)
         const data = await res.json();
@@ -58,6 +61,11 @@ const setData = (info) => {
         
         const h1 = document.createElement('h1');
         h1.textContent = "Mr. Mime";
+        container.append(h1);
+    } else if (info.name === "mime-jr") {
+        
+        const h1 = document.createElement('h1');
+        h1.textContent = "Mime Jr.";
         container.append(h1);
     } else {
         
