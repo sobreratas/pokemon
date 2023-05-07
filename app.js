@@ -43,7 +43,7 @@ function showError() {
 }
 
 function loopMoves(info) {
-    if (info.name == "ditto" || info.name == "unown") {
+    if (info.name == "ditto" || info.name == "unown" || info.name == "smeargle") {
         const newLi = document.createElement("li");
         newLi.innerHTML = info.moves[0].move.name.charAt(0).toUpperCase() + info.moves[0].move.name.slice(1).toLowerCase();
         container.append(newLi)
