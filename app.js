@@ -52,7 +52,7 @@ form.addEventListener('submit', async function (e) {
         searchTerm = "farfetchd"
     } else if(searchTerm === "mime jr" || searchTerm === "mime jr.") {
         searchTerm = "mime-jr";
-    } else if(searchTerm === "hooh" || searchTerm === "ho-oh") {
+    } else if(searchTerm === "hooh" || searchTerm === "ho-oh" || searchTerm === "ho oh") {
         searchTerm = "ho-oh";
     }
 
