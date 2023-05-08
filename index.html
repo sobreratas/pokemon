@@ -8,16 +8,156 @@
     <title>Pokémon Info</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
 </head>
 
 <body>
+    <div class="gen1-modal">
+        <button class="gen1-close-btn"><i class="fas fa-times"></i></button>
+        <div class="gen1-modal-text">
+            <h2>No.1-151</h2>
+            <p>Bulbasaur, Ivysaur, Venusaur,</p>
+            <p>Charmander, Charmeleon, Charizard</p>
+            <p>Squirtle, Wartortle, Blastoise</p>
+            <p>Caterpie, Metapod, Butterfree</p>
+            <p>Weedle, Kakuna, Beedrill</p>
+            <p>Pidgey, Pidgeotto, Pidgeot</p>
+            <p>Rattata, Raticate, Spearow, Fearow</p>
+            <p>Ekans, Arbok, Pikachu, Raichu</p>
+            <p>Sandschrew, Sandslash</p>
+            <p>Nidroran♀, Nidorina, Nidoqueen</p>
+            <p>Nidroran♂, Nidorino, Nidoking</p>
+            <p>Clefairy, Clefable, Vulpix, Ninetales</p>
+            <p>Jigglypuff, Wigglytuff, Zubat, Golbat</p>
+            <p>Oddish, Gloom, Vileplume</p>
+            <p>Paras, Parasect, Venonat, Venomoth</p>
+            <p>Diglett, Dugtrio, Meowth, Persian</p>
+            <p>Psyduck, Golduck, Mankey, Primeape</p>
+            <p>Growlith, Arcanine</p>
+            <p>Poliway, Poliwhirl, Poliwrath</p>
+            <p>Abra, Kadabra, Alakazam</p>
+            <p>Machop, Machoke, Machamp</p>
+            <p>Bellsprout, Weepinbell, Victreebel</p>
+            <p>Tentacool, Tentacruel</p>
+            <p>Geodude, Graveler, Golem</p>
+            <p>Ponyta, Rapidash, Slowpoke, Slowbro</p>
+            <p>Magnemite, Magneton, Farfetch'd</p>
+            <p>Doduo, Dodrio, Seel, Dewgong</p>
+            <p>Grimer, Muk, Shellder, Cloyster</p>
+            <p>Gastly, Haunter, Gengar</p>
+            <p>Onix, Drowzee, Hypno</p>
+            <p>Krabby, Kingler, Voltorb, Electrode</p>
+            <p>Exeggcute, Exeggutor, Cubone, Marowak</p>
+            <p>Hitmonlee, Hitmonchan, Lickitung</p>
+            <p>Koffing, Weezing, Rhyhorn, Rhydon</p>
+            <p>Chansey, Tangela, Kangaskhan</p>
+            <p>Horsea, Seadra, Goldeen, Seaking</p>
+            <p>Staryu, Starmie, Mr. Mime</p>
+            <p>Scyther, Jynx, Electabuzz</p>
+            <p>Magmar, Pinsir, Tauros</p>
+            <p>Magikarp, Gyarados, Lapras</p>
+            <p>Ditto, Eevee, Vaporeon</p>
+            <p>Jolteon, Flareon, Porygon</p>
+            <p>Omanyte, Omastar, Kabuto, Kabutops</p>
+            <p>Aerodactyl, Snorlax</p>
+            <p>Articuno, Zapdos, Moltres</p>
+            <p>Dratini, Dragonair, Dragonite</p>
+            <p>Mewtwo, Mew</p>
+        </div>
+    </div>
+    <div class="gen2-modal">
+        <button class="gen2-close-btn"><i class="fas fa-times"></i></button>
+        <div class="gen2-modal-text">
+            <h2>No.152-251</h2>
+            <p>Chikorita, Bayleef, Meganium</p>
+            <p>Cyndaquil, Quilava, Typhlosion</p>
+            <p>Totodile, Croconaw, Feraligatr</p>
+            <p>Sentret, Furret, Hoothoot, Noctowl</p>
+            <p>Ledyba, Ledian, Spinarak, Ariados</p>
+            <p>Crobat, Chinchou, Lanturn</p>
+            <p>Pichu, Cleffa, Igglybuff</p>
+            <p>Togepi, Togetic, Natu, Xatu</p>
+            <p>Mareep, Flaaffy, Ampharos</p>
+            <p>Bellossom, Marill, Azumarill</p>
+            <p>Sudowoodo, Politoed</p>
+            <p>Hoppip, Skiploom, Jumpluff</p>
+            <p>Aipon, Sunkern, Sunflora, Yanma</p>
+            <p>Wooper, Quagsire, Esperon, Umbreon</p>
+            <p>Murkrow, Slowking, Misdreavus</p>
+            <p>Unown, Wobbuffet, Girafarig</p>
+            <p>Pineco, Forretress, Dunsparce</p>
+            <p>Gligar, Steelix, Snubbull, Granbull</p>
+            <p>Qwilfish, Scizor, Shuckle, Heracross</p>
+            <p>Sneasel, Teddiursa, Ursaring</p>
+            <p>Slugma, Magcargo, Swinub, Piloswine</p>
+            <p>Corsola, Remoraid, Octillery, Delibird</p>
+            <p>Mantine, Skarmory, Houndour, Houndoom</p>
+            <p>Kingdra, Phanpy, Donphan, Porygon2</p>
+            <p>Stantler, Smeargle, Tyrogue</p>
+            <p>Hitmontop, Smoochum, Elekid</p>
+            <p>Magby, Miltank, Blissey</p>
+            <p>Raikou, Entei, Suicune</p>
+            <p>Larvitar, Pupitar, Tyranitar</p>
+            <p>Lugia, Ho-Oh, Celebi</p>
+        </div>
+    </div>
+    <div class="gen3-modal">
+        <button class="gen3-close-btn"><i class="fas fa-times"></i></button>
+        <div class="gen3-modal-text">
+            <h2>No.252-386</h2>
+            <p>Treecko, Grovyle, Sceptile</p>
+            <p>Torchic, Combusken, Blaziken</p>
+            <p>Mudkip, Marshtomp, Swampert</p>
+            <p>Poochyena, Mightyena, Zigzagoon, Linoone</p>
+            <p>Wurmple, Silcoon, Beautify, Cascoon, Dustox</p>
+            <p>Lotad, Lombre, Ludicolo</p>
+            <p>Seedot, Nuzleaf, Shiftry</p>
+            <p>Taillow, Swellow, Wingull, Pelipper</p>
+            <p>Ralts, Kirlia, Gardevoir, Surskit, Masquerain</p>
+            <p>Shroomish, Breloom</p>
+            <p>Slakoth, Vigoroth, Slaking</p>
+            <p>Nincada, Ninjask, Shedinja</p>
+            <p>Whimsur, Loudred, Exploud</p>
+            <p>Makuhita, Hariyama, Azurill</p>
+            <p>Nosepass, Skitty, Delcatty</p>
+            <p>Sableye, Mawile</p>
+            <p>Aron, Lairon, Aggron</p>
+            <p>Meditite, Medicham</p>
+            <p>Eletrike, Manectric, Plusle, Minun</p>
+            <p>Volbeat, Illumise, Roselia</p>
+            <p>Gulpin, Swalot</p>
+            <p>Carvanha, Sharpedo, Wailmer, Wailord</p>
+            <p>Numel, Cemerupt, Torkoal, Spoink</p>
+            <p>Grumpig, Spinda, Trapinch</p>
+            <p>Vibrava, Flygon, Cacnea, Cacturne</p>
+            <p>Swablu, Altaria, Zangoose, Seviper</p>
+            <p>Lunatone, Solrock, Barboach, Whiscash</p>
+            <p>Corphish, Crawdaunt, Baltoy, Claydol</p>
+            <p>Lileep, Cradily, Anorith, Armaldo</p>
+            <p>Feebas, Milotic, Castform, Kecleon</p>
+            <p>Shuppet, Banette, Duskull, Dusclops</p>
+            <p>Tropius, Chimecho, Absol, Wynaut</p>
+            <p>Snorunt, Glalie, Spheal, Sealeo, Walrein</p>
+            <p>Clamperl, Huntail, Gorebyss, Relicanth</p>
+            <p>Luvdisc, Bagon, Shelgon, Salamence</p>
+            <p>Beldum, Metang, Metagross</p>
+            <p>Regirock, Regice, Registeel</p>
+            <p>Latias, Latios, Kyogre</p>
+            <p>Groudon, Rayquaza, Jirachi, Deoxys</p>
+        </div>
+    </div>
     <img class="logo" src="logo.png" alt="logo">
     <form action="">
         <label for="">Pokémon name:</label>
         <input type="text" placeholder="Enter name" name="query">
-        <button>Search</button>
+        <button class="search-btn">Search</button>
     </form>
+    <div class="btn-container">
+        <button class="gen1-btn">Kanto (Gen. 1)</button>
+        <button class="gen2-btn">Johto (Gen. 2)</button>
+        <button class="gen3-btn">Sinnoh (Gen. 3)</button>
+    </div>
 
     <div id="container">
         <div class="name"><span>
@@ -34,7 +174,7 @@
 
     </div>
 
-   
+
 
 
     <script src="app.js"></script>

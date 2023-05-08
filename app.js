@@ -1,7 +1,47 @@
 const form = document.querySelector("form")
 const input = document.querySelector("input")
 const container = document.querySelector("#container")
+const gen1Modal = document.querySelector(".gen1-modal")
+const gen2Modal = document.querySelector(".gen2-modal")
+const gen3Modal = document.querySelector(".gen3-modal")
+const gen1Btn = document.querySelector(".gen1-btn")
+const gen2Btn = document.querySelector(".gen2-btn")
+const gen3Btn = document.querySelector(".gen3-btn")
+const gen1CloseBtn = document.querySelector(".gen1-close-btn")
+const gen2CloseBtn = document.querySelector(".gen2-close-btn")
+const gen3CloseBtn = document.querySelector(".gen3-close-btn")
 
+//GEN 1 MODAL OPEN AND CLOSE
+gen1Btn.addEventListener('click', function(){
+    gen1Modal.classList.add("open-modal")
+})
+
+gen1CloseBtn.addEventListener('click', function(){
+    gen1Modal.classList.remove("open-modal")
+    
+})
+
+//GEN 2 MODAL OPEN AND CLOSE
+gen2Btn.addEventListener('click', function(){
+    gen2Modal.classList.add("open-modal")
+})
+
+gen2CloseBtn.addEventListener('click', function(){
+    gen2Modal.classList.remove("open-modal")
+    
+})
+
+//GEN 3 MODAL OPEN AND CLOSE
+gen3Btn.addEventListener('click', function(){
+    gen3Modal.classList.add("open-modal")
+})
+
+gen3CloseBtn.addEventListener('click', function(){
+    gen3Modal.classList.remove("open-modal")
+    
+})
+
+//FORM SUBMISSION CODE
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
     container.innerHTML = ''
@@ -12,6 +52,8 @@ form.addEventListener('submit', async function (e) {
         searchTerm = "farfetchd"
     } else if(searchTerm === "mime jr" || searchTerm === "mime jr.") {
         searchTerm = "mime-jr";
+    } else if(searchTerm === "hooh" || searchTerm === "ho-oh") {
+        searchTerm = "ho-oh";
     }
 
     try {
@@ -25,6 +67,9 @@ form.addEventListener('submit', async function (e) {
         showError();
         form.elements.query.value = '';
     }
+    gen1Modal.classList.remove("open-modal")
+    gen2Modal.classList.remove("open-modal")
+    gen3Modal.classList.remove("open-modal")
 })
 
 function showError() {
@@ -42,6 +87,8 @@ function showError() {
     container.style.background = "white"
 }
 
+//LOOP MOVES ARRAY ONLY 4 TIMES
+
 function loopMoves(info) {
     if (info.name == "ditto" || info.name == "unown" || info.name == "smeargle") {
         const newLi = document.createElement("li");
@@ -56,6 +103,8 @@ function loopMoves(info) {
     }
 }
 
+//SET DATA FUNCTION (CATCH NAME EXCEPTIONS)
+
 const setData = (info) => {
     if (info.name === "mr-mime") {
         
@@ -66,6 +115,16 @@ const setData = (info) => {
         
         const h1 = document.createElement('h1');
         h1.textContent = "Mime Jr.";
+        container.append(h1);
+    } else if (info.name === "farfetchd") {
+        
+        const h1 = document.createElement('h1');
+        h1.textContent = "Farfetch'd";
+        container.append(h1);
+    } else if (info.name === "ho-oh") {
+        
+        const h1 = document.createElement('h1');
+        h1.textContent = "Ho-Oh";
         container.append(h1);
     } else {
         
