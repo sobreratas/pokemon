@@ -158,7 +158,7 @@ button:hover {
 .gen1-close-btn, .gen2-close-btn, .gen3-close-btn {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: .5rem;
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
@@ -166,7 +166,7 @@ button:hover {
     cursor: pointer;
 }
 
-.close-btn:hover, .gen2-close-btn:hover, .gen3-close-btn:hover {
+.gen1-close-btn:hover, .gen2-close-btn:hover, .gen3-close-btn:hover {
     color: red;
     background-color: none;
 }
